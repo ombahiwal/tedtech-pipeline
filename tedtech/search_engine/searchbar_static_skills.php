@@ -17,7 +17,6 @@ function clean($string){
 
 if(isset($_GET['search_query'])){
     $query_string = clean($_GET['search_query']);
- 
     // replace table name and column names to get the desired output
     $table_name = "skill_table";
     $column_name = "skill_name";
@@ -26,7 +25,6 @@ if(isset($_GET['search_query'])){
     $limit = "5";
     // Connection file 
     require('../connections/db_connection_root.php');
-    
     $sqlQuery = "SELECT {$fetch_column_name} FROM {$table_name} WHERE LOWER({$column_name}) LIKE LOWER('{$query_string}%') LIMIT {$limit}";
 $stmt =  $dbcon_pdo->query($sqlQuery);
     

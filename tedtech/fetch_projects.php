@@ -56,14 +56,12 @@ if(isset($_GET['search_query'])){
     
     $sqlQuery = "SELECT {$fetch_column_name} FROM {$table_name} WHERE LOWER({$column_name}) LIKE LOWER('{$query_string}%') LIMIT {$limit}";
 $stmt =  $dbcon_pdo->query($sqlQuery);
-    
      $stocks = [];
         while($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             $stocks[] = [
                 'skill_name' => $row['skill_name'] 
             ];
         }
-    var_dump($stocks);
-    
+    var_dump($stocks);   
 }
 ?>

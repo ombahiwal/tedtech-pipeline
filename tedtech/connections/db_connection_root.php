@@ -1,15 +1,21 @@
 <?php
 // Relational Database Service Root user credentials.
+//$dbname = "tedtechdb";
+//$username = "ombahiwal1";
+//$password = "";
+//$dbhosturl = "tedtechdb.csjpksikengp.us-east-2.rds.amazonaws.com";
+//$dbcon_pdo = 0;
+
 $dbname = "tedtechdb";
 $username = "ombahiwal1";
-$password = "Omkar109";
-$dbhosturl = "tedtechdb.csjpksikengp.us-east-2.rds.amazonaws.com";
+$password = "tedtechdb123";
+$dbhost_endpoint = "tedtechdb-server.csqcw200ryz3.us-east-2.rds.amazonaws.com";
 $dbcon_pdo = 0;
+
+
 try{
     // Database connection in PDO
-    $dbcon_pdo  = new PDO("pgsql:host={$dbhosturl};dbname={$dbname}", "{$username}", "{$password}");
-
-    
+    $dbcon_pdo  = new PDO("pgsql:host={$dbhost_endpoint};dbname={$dbname}", "{$username}", "{$password}");
 //    echo "Connected Successfully ";
   
     
@@ -31,4 +37,7 @@ try{
 }catch(PDOException $e){
     echo $e->getMessage();
 }
+
+var_dump($dbcon_pdo)
 ?>
+
