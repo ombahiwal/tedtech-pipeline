@@ -60,7 +60,7 @@ include('../../connections/db_connection_root.php');
     </style>
    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="https://tedtech.in">
           <img src="http://tedtech.in/images/logos/logo_nav.png">
         </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
