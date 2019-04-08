@@ -146,7 +146,7 @@ include('../../connections/db_connection_root.php');
               {$row['description']}
               </p>
             <small class=\"text-muted\">
-                Proposed by <a href=\"../../developer/panel/developer.php?id={$row['developer_id']}\">{$name['first_name']} {$name['last_name']}</a> on {$row['timestamp']}</small><br>";
+                Proposed by <a href=\"../../developer/panel/developer.php?id={$row['developer_id']}\">{$ongoing['first_name']} {$ongoing['last_name']}</a> on {$row['timestamp']}</small><br>";
               if($ongoing['ongoing'] != 'YES'){  
             echo "<form id=\"{$row['bid_id']}\"action=\"../../orders/accept-bid.php\" method=\"POST\">
              <button type=\"button\" onclick=\"updateValue({$row['bid_id']},{$row['amount']})\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\">
@@ -234,12 +234,14 @@ include('../../connections/db_connection_root.php');
           amount: {
             value: value.toString()
           }
+            
         }]
       });
     },
     onApprove: function(data, actions) {
       return actions.order.capture().then(function(details) {
         alert('Transaction completed by ' + details.payer.name.given_name);
+        
         // Call your server to save the transaction
           document.getElementById(bid_form_id.toString()).submit();  
           

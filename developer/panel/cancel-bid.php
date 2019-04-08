@@ -1,6 +1,3 @@
-
-
-
 <?php
 include('../../connections/db_connection_root.php');
 $project_id = $_POST['pid'];

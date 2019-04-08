@@ -1,5 +1,4 @@
-<?php
-    require('connections/db_connection_root.php');?>
+
 <!--
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">

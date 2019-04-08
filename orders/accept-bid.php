@@ -57,7 +57,7 @@ include '../Mailer/classes/class.phpmailer.php';
     
     echo "<center><h1>BID Accepted!!<br>Redirecting...</h1></center>
     <script> window.setTimeout(function(){
-        window.location.href = \"../uploader/panel/project-page-uploader.php\";
+        window.location.href = \"../uploader/panel/index.php\";
 
     }, 3000);</script>";
 }

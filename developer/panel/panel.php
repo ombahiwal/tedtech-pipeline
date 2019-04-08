@@ -85,7 +85,7 @@ include('../../connections/db_connection_root.php');
             <?php if($_SESSION['ongoing']=='YES'){
             echo '<a href="project-panel.php" class="list-group-item">Ongoing Project</a>';
             }else{
-            echo '<a href="project-panel.php" class="list-group-item">Find Projects</a>';
+            echo '<a href="../../projects/index.php" class="list-group-item">Find Projects</a>';
                 }
                 ?>
              <a href="./logout.php" class="list-group-item">Logout</a>
@@ -123,9 +123,10 @@ include('../../connections/db_connection_root.php');
                 if($pre != $row['uploader_id']){    
                   $name_query = "select project_title, project_id from projects_table where uploader_id='{$row['uploader_id']}'"; 
                 $res = pg_query($dbconn, $name_query);
-                   $count++; 
-                }else{
                     $count =1;
+                    
+                }else{
+                   $count++; 
                 }
                 for($i=0; $i<$count; $i++){
                     $name = pg_fetch_assoc($res);
@@ -139,14 +140,24 @@ include('../../connections/db_connection_root.php');
                 Proposed on {$row['timestamp']}</small><br>";
                 
                 if($row['status'] == 'PENDING' && $_SESSION['ongoing'] !='YES'){
-                echo "<form id=\"{$row['bid_id']}\" action=\"confirm-project.php\" method=\"POST\">
+                echo "<br><form id=\"{$row['bid_id']}\" action=\"confirm-project.php\" method=\"POST\">
                  <button type=\"button\" onclick=\"update_values({$row['bid_id']})\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\">
                 Confirm
             </button>
               <input type=\"hidden\" value=\"{$row['bid_id']}\" name=\"bid\">
               <input type=\"hidden\" value=\"{$name['project_id']}\" name=\"pid\">
             
-              </form>";
+              </form><br>
+              
+              <form action=\"cancel-bid.php\" method=\"POST\">
+                 <button type=\"submit\" class=\"btn btn-danger\" data-toggle=\"modal\">
+                Cancel
+            </button>
+              <input type=\"hidden\" value=\"{$row['bid_id']}\" name=\"bid\">
+              <input type=\"hidden\" value=\"{$name['project_id']}\" name=\"pid\">
+            
+              </form>
+              <hr>";
                     
             }$pre = $row['uploader_id'];
             }

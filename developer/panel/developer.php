@@ -11,7 +11,6 @@ include('../../connections/db_connection_root.php');
     $data = array_filter($data);
  $query = "SELECT skill_name FROM skill_table where skill_id in (".$data['skill_ids'].")";
     $result = pg_query($query);
-    
 
 ?>
 <html lang="en">
@@ -115,7 +114,7 @@ include('../../connections/db_connection_root.php');
               <?php if(isset($data['linkedin'])){
             echo "<a href=". $data['github']." target=\"_blank\"><i class=\"fab fa-linkedin\"></i></a> ";}
                   
-                  if(isset($data['github']) ){
+                  if(isset($data['github'])){
             echo "<a href=". $data['linkedin']."  target=\"_blank\"><i class=\"fab fa-github\"></i></a>";}
                   ?>
                   </h3>

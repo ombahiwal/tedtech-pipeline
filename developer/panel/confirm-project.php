@@ -16,14 +16,16 @@ $result = pg_query($dbconn, $query);
 
 // change developer ongoing to yes
 
-$query = "UPDATE user_info_developer set ongoing='YES' where bid_id='{$bid_id}'";
-$result = pg_query($dbconn, $query);
 
-$query = "SELECT * from projects_table where project_id='{$project_id}'";
+
+$query = "SELECT * from bids where project_id='{$project_id}'";
 $result = pg_query($dbconn, $query);
 $row = pg_fetch_assoc($result);
 $uploader_id = $row['uploader_id'];
 $developer_id = $row['developer_id'];
+
+$query = "UPDATE user_info_developer set ongoing='YES' where developer_id='{$developer_id}'";
+$result = pg_query($dbconn, $query);
 
 $query = "SELECT * from user_info_uploader where uploader_id='{$uploader_id}'";
 $result = pg_query($dbconn, $query);
@@ -40,12 +42,10 @@ $d_phone = $row['phone'];
 	$subject="TedTech - Project Confirmed.";
 	$body= "<center><b>Congratulations!!</b><br>The developer has confirmed your project<br><br>The Contact Details - <br>Email : {$d_email}<br>Phone : {$d_phone}</center>";
 
-    
-    
-include 'classes/class.phpmailer.php';
+include '../../Mailer/classes/class.phpmailer.php';
    $mail= new PHPMailer();
 // Un-Comment on localhost   
-//$mail->isSMTP();
+$mail->isSMTP();
    $mail->SMTPDebug=2;
    $mail->SMTPAuth=true;
    $mail->SMTPSecure='ssl';
@@ -64,7 +64,7 @@ include 'classes/class.phpmailer.php';
    }
    else
    {
-   	  echo "<center><h1>Message has been sent Successfully!</center>";
+   	  echo "<center><h1>Message has been sent Successfully!<br> Project Accepted!!</center>";
    }
 
 
