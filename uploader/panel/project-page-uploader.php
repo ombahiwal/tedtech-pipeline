@@ -60,7 +60,7 @@ include('../../connections/db_connection_root.php');
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <script
-    src="https://www.paypal.com/sdk/js?client-id=AYxnUkb8nrWavfE-mSnBhLkmHeao882OQbnQfICRe8JI0hwBDe5LpwncVkd4D2CSzD9G0MyWepr3LXCf">
+    src="https://www.paypal.com/sdk/js?client-id=AYxnUkb8nrWavfE-mSnBhLkmHeao882OQbnQfICRe8JI0hwBDe5LpwncVkd4D2CSzD9G0MyWepr3LXCf&currency=INR">
   </script>
 <body>
 
