@@ -42,13 +42,56 @@ if(!isset($_SESSION['uploader_id'])){
     </head>
     
     <style>
-        select{
-            width: 100%;
-            height: 50px;
+         body{
+             margin-top: 60px;
+         }
+         
+        html,body{
+    height: 100%
         }
-        
-  
     </style>
+    
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    
+      <a class="navbar-brand" href="#">
+          <img src="http://tedtech.in/images/logos/logo_nav.png">
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+        
+            
+            <?php if(isset($_SESSION['uploader_id'])){
+            echo '<li class="nav-item">
+      <a class="nav-link" href="http://tedtech.in/uploader/panel/logout.php">Logout</a>
+    </li>';
+        }
+            if(isset($_SESSION['developer_id'])){
+            echo '<li class="nav-item">
+      <a class="nav-link" href="http://tedtech.in/developer/panel/logout.php">Logout</a>
+    </li>';
+        }
+    
+            
+     if(!isset($_SESSION['developer_id']) && !isset($_SESSION['uploader_id'])){       
+    echo '<li class="nav-item dropdown" style="margin-right:10px">
+      <a class="btn btn-default nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LOGIN
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="http://tedtech.in/developer/panel/index.php">Developer</a>
+        <a class="dropdown-item" href="http://tedtech.in/uploader/panel/login.php">Uploader</a>
+      </div>
+    </li>';}
+       ?>
+            
+  </ul>
+     </div>
+  </nav>
+
 <body>
 
     <link rel="stylesheet" href="../../styles/style_temp.css" type="text/css">

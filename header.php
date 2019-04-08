@@ -12,10 +12,11 @@
 <!--<p>This is header</p>-->
 
   <!-- Navigation -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">TedTech.in
-<!--          <img src="./images/logos/logo_nav.png">-->
+          <img src="./images/logos/logo_nav.png">
         </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

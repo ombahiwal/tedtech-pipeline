@@ -55,7 +55,11 @@ include('connections/db_connection_root.php');
   <link href="styles/project-page.css" rel="stylesheet">
 
 </head>
-
+    <style>
+        html,body{
+    height: 100%
+        }
+    </style>
 <body>
 
   <!-- Navigation -->
