@@ -45,7 +45,7 @@ $d_phone = $row['phone'];
 include '../../Mailer/classes/class.phpmailer.php';
    $mail= new PHPMailer();
 // Un-Comment on localhost   
-$mail->isSMTP();
+//$mail->isS MTP();
    $mail->SMTPDebug=2;
    $mail->SMTPAuth=true;
    $mail->SMTPSecure='ssl';

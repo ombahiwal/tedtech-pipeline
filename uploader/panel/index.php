@@ -41,7 +41,7 @@ include('../../connections/db_connection_root.php');
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap core CSS -->
-
+<?php include('../../favicon.php');?>    
     
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">

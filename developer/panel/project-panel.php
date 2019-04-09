@@ -3,7 +3,7 @@
 session_start();
 //echo "Session User ID : ".$_SESSION['uploader_id']; 
 
-include('../connections/db_connection_root.php');
+include('../../connections/db_connection_root.php');
 
 ?>
 <html lang="en">
@@ -91,6 +91,18 @@ include('../connections/db_connection_root.php');
         <a class="dropdown-item" href="http://tedtech.in/uploader/panel/login.php">Uploader</a>
       </div>
     </li>';}
+
+            
+                    
+    $user_id = $_SESSION['developer_id'];
+    $query = "SELECT * from bids where developer_id='{$user_id}' and status='ACCEPTED'";
+    $res = pg_query($dbconn, $query);
+    $row = pg_fetch_assoc($res);
+    $uploader_id = $row['uploader_id'];
+    $project_id = $row['project_id'];
+    $start_date = $row['timestamp'];
+    $amount = $row['amount'];
+            
        ?>
             
   </ul>
@@ -99,8 +111,155 @@ include('../connections/db_connection_root.php');
 
     
 <body>
-    </body>
+    <div class="container">
+
+    <div class="row">
+
+      
+      <!-- /.col-lg-3 -->
+<div class="col-lg-4">
+        
+     <div  class="card mt-4">
+          <div class="card-body">
+            <h2 class="card-title">Development Phases</h2>              
+              
+           
+            <small class="text-muted">
+               Started on : <?php echo $start_date;?></small>
+              <br>
+               <p style="color:lightgreen"class="card-text">
+                   <?php
+                   if(isset($_GET['update'])){
+                       echo "Project Phase Updated!!";
+                   }
+                   ?>
+               </p>
+          </div>
+        
     
+        <form action="update-state.php" method="post">
+    <div>
+    <ul class="list-group">
+  <li class="list-group-item">
+        
+        <div class="form-check">
+      <label class="form-check-label" for="radio1">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Simulation | Requirement Analysis" disabled>Simulation | Requirement Analysis
+      </label>
+    </div>
+        
+        </li>
+  <li class="list-group-item">
+        <div class="form-check">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Design | Flow Chart" >Design | Flow Chart
+      </label>
+    </div>
+        </li>
+  <li class="list-group-item"><div class="form-check">
+      <label class="form-check-label" for="radio3">
+        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="Implementation" >Implementation
+      </label>
+    </div></li>
+  <li class="list-group-item"><div class="form-check">
+      <label class="form-check-label" for="radio4">
+        <input type="radio" class="form-check-input" id="radio4" name="optradio" value="Appraisal">Appraisal 
+      </label>
+    </div></li>
+  <li class="list-group-item"><div class="form-check">
+      <label class="form-check-label" for="radio5">
+        <input type="radio" class="form-check-input" id="radio5" name="optradio" value="Final Evaluation" >Final Evaluation
+      </label>
+    </div></li>
+        
+          <li class="list-group-item"><div class="form-check">
+      <label class="form-check-label" for="radio6">
+        <input type="radio" class="form-check-input" id="radio6" name="optradio" value="Implementation and Monitoring" >Implementation and Monitoring
+      </label>
+    </div></li>
+          <li class="list-group-item"><div class="form-check">
+      <label class="form-check-label" for="radio7">
+        <input type="radio" class="form-check-input" id="radio7" name="optradio" value="Waiting for Approval" >Waiting for Approval
+      </label>
+    </div></li>
+          <li class="list-group-item"><div class="form-check">
+      <label class="form-check-label" for="radio8">
+        <input type="radio" class="form-check-input" id="radio8" name="optradio" value="Ready to Dispatch" disabled>Ready to Dispatch
+      </label>
+    </div></li>
+</ul>
+    
+    </div><br><br>
+            <button class="form-control btn btn-danger" name="update" type="submit">Update Phase</button>
+            </form><br><br>
+    </div>
+        
+        </div>
+        
+        
+      <div class="col-lg-8">
+<?php
+  
+    $data = 0;
+    $prepare = pg_prepare($dbconn, "query", 'SELECT * FROM projects_table WHERE project_id = $1');
+
+    $result = pg_execute($dbconn, "query", array($project_id));
+    $data = pg_fetch_all($result);
+    $data = $data[0];
+    
+    
+    $user_id = $data['uploader_id'];
+    $prepare2 = pg_prepare($dbconn, "query1", 'SELECT first_name, last_name, organisation, job_title FROM user_info_uploader WHERE uploader_id = $1');
+
+    $result2 = pg_execute($dbconn, "query1", array($user_id));
+    $data2 = pg_fetch_all($result2);
+    $username = $data2[0]['first_name']." ".$data2[0]['last_name'] ;
+//    print_r($data);
+    
+    // Fetch Category
+    $cat_prepare = pg_prepare($dbconn, "cat", 'SELECT category_name FROM project_category WHERE category_id = $1');
+    $cat_result = pg_execute($dbconn, "cat", array($data['category_id']));
+    $category = pg_fetch_all($cat_result);
+    $category = $category[0]["category_name"];
+          
+          ?>
+        <div  class="card mt-4">
+          <div class="card-body">
+            <h2 class="card-title"><?php echo $data['project_title'];?></h2>
+              <h5><?php echo $category;?></h5>
+            <h5>Bid Amount : &#8377; <?php echo $amount;?></h5>
+              <h4>Phase : <?php echo $data['state'];?></h4>
+              
+              
+            <p class="card-text"><?php 
+                echo $data['description'];
+                ?></p>
+              <small> Status : <?php echo $data['status'];?></small><br>
+              
+            <small class="text-muted">
+               Posted by <a href="./uploader/panel/user-info.php?id=<?php echo $user_id; ?>">
+                <?php echo $username;?>
+                </a> on <?php echo $data['timestamp'];?></small>
+          </div>
+        </div>
+        <!-- /.card -->
+
+    
+        <!-- /.card -->
+         
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+    
+    
+    </body>
+    <?php
+    include('../../footer.php');
+    ?>
     
     
     

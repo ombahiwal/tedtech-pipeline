@@ -223,7 +223,7 @@ p{
   <section>
         <div class="center">
               <center>
-        <a href="./index.php"><img style="margin-top: 10%" class="w3-animate-top img-responsive" src="./images/logos/final.png"></a>
+        <a href="./about.php"><img style="margin-top: 10%" class="w3-animate-top img-responsive" src="./images/logos/final.png"></a>
                    </center>
             </div>
 <!--
@@ -233,7 +233,6 @@ p{
 
     </center>
 -->
-
 <a href="#" class="scroll-down" address="true"></a>
 </section>
 
@@ -288,12 +287,71 @@ p{
         <br><br>
     <center>
         <a href="./uploader/panel/login.php" class="btn btn-danger">Upload Projects</a>
+<a href="./about.php" class="btn btn-danger">About Us</a>
+            
+            </center>
+    </div>  
+        <a href="#" class="scroll-down" address="true"></a>
+    </section>
+    
+    
+     <section id="mechanism" >
+    <div class="sec1" >
+ <br>
+        <center><div class="mech-title">Develop Projects and Earn Money</div></center>
+         <br>
+        
+       <div  class="row container-fluid">    
+             <div class="col-sm-1" style="width: 4vw"></div>
+            <div class="col-sm-2" >
+                <center><img class="img-responsive" src="./images/mechanism/5.png"> 
+                <h2>Find Projects of Your Interest.</h2>
+                </center></div>
+            
+            <div class="col-sm-1">
+                <div class="ext-box">
+    <div class="int-box">
+       <center><img class="arrow img-responsive" src="./images/mechanism/right.png"></center>
+    </div>
+</div>
+                </div>
+            
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/6.png">
+                <h2>Make an Offer.</h2>
+                </center></div>
+            
+           <div class="col-sm-1"><center><img class="arrow img-responsive" src="./images/mechanism/right.png">
+               
+               </center></div>
+            
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/7.png">
+                <h2>Get Confirmation and Complete Order.</h2>
+                </center></div>
+            
+            <div class="col-sm-1"><center><img class="arrow img-responsive" src="./images/mechanism/right.png">
+                           
+
+                </center></div>
+            
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/8.png">
+              <h2>Get Full Payment.</h2>
+
+                </center></div>
+        <a href="#" class="scroll-down" address="true"></a>
+
+        </div>
+    <br>
+    <br>
+        <br><br>
+    <center>
+        
      <a href="./developer/panel/" class="btn btn-danger"> Develop Projects</a> 
          <a href="projects/index.php" class="btn btn-danger">Find Projects</a>
-     <a href="contact.html" class="btn btn-danger">Contact Us</a>
+     <a href="./about.php" class="btn btn-danger">About Us</a>
             </center>
     </div>    
     </section>
+    
     
     <footer>
     &#9400; TedTech - 2019

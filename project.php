@@ -53,7 +53,7 @@ include('connections/db_connection_root.php');
 
   <!-- Custom styles for this template -->
   <link href="styles/project-page.css" rel="stylesheet">
-
+<?php include('favicon.php');?>    
 </head>
     <style>
         html,body{

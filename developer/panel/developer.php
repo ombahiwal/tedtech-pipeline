@@ -22,6 +22,9 @@ include('../../connections/db_connection_root.php');
   <meta name="description" content="">
   <meta name="author" content="">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <?php include('../../favicon.php');?>
+
+    
   <title><?php echo $data['first_name']." ".$data['last_name']?> - Tedtech.in</title>
  
   <!-- Bootstrap core CSS -->
@@ -200,14 +203,9 @@ include('../../connections/db_connection_root.php');
 
   </div>
   <!-- /.container -->
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
     </div>
-    <!-- /.container -->
-  </footer>
+  <!-- Footer -->
+<?php include('../../footer.php');?>    
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

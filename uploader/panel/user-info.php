@@ -55,7 +55,7 @@ include('../../connections/db_connection_root.php');
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+<?php include('../../favicon.php');?>    
 </head>
   <style>
          body{
@@ -183,5 +183,5 @@ include('../../connections/db_connection_root.php');
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
+<?php include('../../footer.php');?>    
 </html>

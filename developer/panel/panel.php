@@ -30,7 +30,7 @@ include('../../connections/db_connection_root.php');
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+<?php include('../../favicon.php');?>    
   <title>TedTech.in | Developer Panel</title>
 
   <!-- Bootstrap core CSS -->
@@ -256,6 +256,7 @@ include('../../connections/db_connection_root.php');
 
   <!-- Footer -->
     <br>
+
  
 
   <!-- Bootstrap core JavaScript -->
@@ -272,6 +273,7 @@ include('../../connections/db_connection_root.php');
     }
     </script>
 </body>
+    
 <?php
     include('../../footer.php');
     ?>

@@ -31,7 +31,7 @@ include('../connections/db_connection_root.php');
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+<?php include('../favicon.php');?>    
 </head>
 
     
@@ -200,7 +200,7 @@ include('../connections/db_connection_root.php');
 
   <!-- Footer -->
     <br>
- 
+ <?php include('../footer.php');?>    
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

@@ -168,7 +168,7 @@ if(!isset($_SESSION['uploader_id'])){
  
       
      <fieldset style="color:white;">
-     <label class="customcheck">I agree to the <a href="#">terms and conditions</a> and <a target="_blank" href="../../docs/privacy-policy.txt">privacy policy</a>
+     <label class="customcheck">I agree to the <a href="http://tedtech.in/docs/TC.pdf">terms and conditions</a> and <a target="_blank" href="http://tedtech.in/docs/PRIVACY.pdf">privacy policy</a>
           <input name="agreement" id="agreement" type="checkbox" title="please accept the terms to proceed" required>
           <span class="checkmark"></span>
         </label>
@@ -182,7 +182,7 @@ if(!isset($_SESSION['uploader_id'])){
 
     </body>
     <footer>
-    &#9400; 2018 - TedTech.in
+    &#9400; 2019 - TedTech.in
     </footer>
     <script>
         
