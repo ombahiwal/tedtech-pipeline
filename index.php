@@ -8,6 +8,16 @@
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -35,15 +45,26 @@
     </head>
     
     <style>
-     
+        table td{
+            padding: 10px;
+        }
         body{
             font-family: 'Roboto Condensed', sans-serif;
             
         }
+        #ft{
+            font-size: 2rem;
+        }
         .arrow{
             margin-top: 50%;
         }
-        
+        #footer{
+         height: 50%; 
+            font-size: 2rem;
+       }
+        .h6{
+            font-size: 2rem;
+        }
         footer{
             height: 20px;
             width: 100%;
@@ -242,12 +263,12 @@ p{
     <div class="sec1" >
  <br>
         <center><div class="mech-title">Get your projects done.</div></center>
-         <br>
+         <br><br>
         
        <div  class="row container-fluid">    
              <div class="col-sm-1" style="width: 4vw"></div>
             <div class="col-sm-2" >
-                <center><img class="img-responsive" src="./images/mechanism/1.png"> 
+                <center><img class="img-responsive" src="./images/mechanism/1.png"><br><br> 
                 <h2> Upload Abstract</h2>
                 </center></div>
             
@@ -259,7 +280,7 @@ p{
 </div>
                 </div>
             
-            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/2.png">
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/2.png"><br><br>
                 <h2> Decide a Budget</h2>
                 </center></div>
             
@@ -267,7 +288,7 @@ p{
                
                </center></div>
             
-            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/3.png">
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/3.png"><br><br>
                 <h2>Receive an Offer</h2>
                 </center></div>
             
@@ -276,7 +297,7 @@ p{
 
                 </center></div>
             
-            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/4.png">
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/4.png"><br><br>
               <h2>Confirm Order</h2>
 
                 </center></div>
@@ -299,12 +320,12 @@ p{
     <div class="sec1" >
  <br>
         <center><div class="mech-title">Develop Projects and Earn Money</div></center>
-         <br>
+         <br><br>
         
        <div  class="row container-fluid">    
              <div class="col-sm-1" style="width: 4vw"></div>
             <div class="col-sm-2" >
-                <center><img class="img-responsive" src="./images/mechanism/5.png"> 
+                <center><img class="img-responsive" src="./images/mechanism/5.png"> <br><br>
                 <h2>Find Projects of Your Interest.</h2>
                 </center></div>
             
@@ -316,7 +337,7 @@ p{
 </div>
                 </div>
             
-            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/6.png">
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/6.png"><br><br>
                 <h2>Make an Offer.</h2>
                 </center></div>
             
@@ -324,7 +345,7 @@ p{
                
                </center></div>
             
-            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/7.png">
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/7.png"><br><br>
                 <h2>Get Confirmation and Complete Order.</h2>
                 </center></div>
             
@@ -333,7 +354,7 @@ p{
 
                 </center></div>
             
-            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/8.png">
+            <div class="col-sm-2"><center><img class="img-responsive" src="./images/mechanism/8.png"><br><br>
               <h2>Get Full Payment.</h2>
 
                 </center></div>
@@ -352,10 +373,12 @@ p{
     </div>    
     </section>
     
-    
+    <?php include('footer.php');?>
+<!--
     <footer>
     &#9400; TedTech - 2019
     </footer>
+-->
     
   <!--- <div style="height: 100%; width: 100%">.</div>
     <div class="center2"><img class="center2 img-responsive" src="./final.png">
