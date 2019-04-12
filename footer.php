@@ -31,7 +31,7 @@
 					<ul class="list-unstyled list-inline social text-center">
 						<li class="list-inline-item"><a href="https://www.facebook.com/Tedtech.in"><i class="fa fa-facebook"></i></a></li>
 						<li class="list-inline-item"><a href="https://www.instagram.com/tedtech.in"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/tedtech/about/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 						<li class="list-inline-item"><a href="mailto:support@tedtech.in"><i class="fa fa-envelope"></i></a></li>
 					</ul>
 				</div>
@@ -41,9 +41,8 @@
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
 					<ul class="list-unstyled list-inline social text-center">
 						<li class="list-inline-item"><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/logo-center/9_bdg_secured_by_pp_2line.png" border="0" alt="Secured by PayPal"></a></td><td><span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=wBzXsJr3uYr5Fgv4R6u1K9bSZULf545sIcsryTgqbCpdkguase1DYKd5wEPi"></script></span></td><td>
-                            <img src="https://tedtech.in/images/footer/aws.png">
                         
-                            </td></tr><tr></table></li>
+                            </td></tr><img src="https://tedtech.in/images/footer/aws.png"><tr></table></li>
 					</ul>
 				</div>
 				<hr>
